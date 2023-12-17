@@ -60,3 +60,9 @@ mvn clean install
 ```
 mvn rewrite:run
 ```
+
+Or 
+
+```
+mvn org.openrewrite.maven:rewrite-maven-plugin:run
+```
