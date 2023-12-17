@@ -45,7 +45,7 @@ mvn clean install
 					</activeRecipes>					
 				</configuration>
 				<dependencies>
-					<!-- This module is made up for sake of example. It isn't packaged with OpenRewrite -->
+					<!-- This module isn't packaged with OpenRewrite -->
 					<dependency>
 						<groupId>com.omidp.app</groupId>
 						<artifactId>mvc-migrator</artifactId>
