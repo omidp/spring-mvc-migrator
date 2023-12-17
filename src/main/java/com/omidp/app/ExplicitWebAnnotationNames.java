@@ -52,7 +52,7 @@ public class ExplicitWebAnnotationNames extends Recipe {
 		return Preconditions.check(
 			Preconditions.or(
 				new UsesType<>("org.springframework.web.bind.annotation.PathVariable", false),
-				new UsesType<>("org.springframework.web.bind.annotation.PathVariable", false)
+				new UsesType<>("org.springframework.web.bind.annotation.RequestParam", false)
 			),
 			new ExplicitWebAnnotationNamesVisitor()
 		);
