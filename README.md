@@ -32,7 +32,7 @@ mvn clean install
 
 ## How to use
 
-- Add the open rewrite plugin to maven pom file 
+- Add the open rewrite plugin to your maven pom file 
 
 ```
 <plugin>
