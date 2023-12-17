@@ -47,7 +47,7 @@ public class ExplicitWebAnnotationNamesTest implements RewriteTest {
 					                                    }
 					                                    
 					                                    @GetMapping("/comments")
-					                                    public ResponseEntity<String> getUser(@RequestParam(required=false) Set<String> userIds, @RequestParam Long id) {
+					                                    public ResponseEntity<String> getUserComments(@RequestParam(required=false) Set<String> userIds, @RequestParam Long id) {
 					                                        System.out.println(id);
 					                                    }
 					                                    
@@ -66,7 +66,7 @@ public class ExplicitWebAnnotationNamesTest implements RewriteTest {
 					                                    }
 					                                    
 					                                    @GetMapping("/comments")
-					                                    public ResponseEntity<String> getUser(@RequestParam(required=false, value="userIds") Set<String> userIds, @RequestParam("id") Long id) {
+					                                    public ResponseEntity<String> getUserComments(@RequestParam(required=false, value="userIds") Set<String> userIds, @RequestParam("id") Long id) {
 					                                        System.out.println(id);
 					                                    }
 					                                    
