@@ -1,6 +1,6 @@
 ## What is MVC migrator
 
-This project helps you to refactor you spring MVC PathVariable and RequestParam and add explicit names to those annotations.
+This project helps you to refactor you spring MVC _PathVariable_ and _RequestParam_ and add explicit names to those annotations.
 
 for example : 
 
