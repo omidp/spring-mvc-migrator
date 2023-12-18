@@ -1,6 +1,6 @@
 ## What is MVC migrator
 
-This project helps you to refactor you spring MVC _PathVariable_ and _RequestParam_ and add explicit names to those annotations.
+This project helps you to refactor your spring MVC _PathVariable_ and _RequestParam_ and add explicit names to those annotations.
 
 for example : 
 
@@ -36,22 +36,22 @@ mvn clean install
 
 ```
 <plugin>
-				<groupId>org.openrewrite.maven</groupId>
-				<artifactId>rewrite-maven-plugin</artifactId>
-				<version>5.15.4</version>
-				<configuration>
-					<activeRecipes>
-						<recipe>com.omidp.app.ExplicitWebAnnotationNames</recipe>
-					</activeRecipes>					
-				</configuration>
-				<dependencies>
-					<!-- This module isn't packaged with OpenRewrite -->
-					<dependency>
-						<groupId>com.omidp.app</groupId>
-						<artifactId>mvc-migrator</artifactId>
-						<version>1.0-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
+   <groupId>org.openrewrite.maven</groupId>
+   <artifactId>rewrite-maven-plugin</artifactId>
+   <version>5.15.4</version>
+   <configuration>
+      <activeRecipes>
+         <recipe>com.omidp.app.ExplicitWebAnnotationNames</recipe>
+      </activeRecipes>
+   </configuration>
+   <dependencies>
+      <!-- This module isn't packaged with OpenRewrite -->
+      <dependency>
+         <groupId>com.omidp.app</groupId>
+         <artifactId>mvc-migrator</artifactId>
+         <version>1.0-SNAPSHOT</version>
+      </dependency>
+   </dependencies>
 </plugin>
 ```
 
@@ -61,7 +61,7 @@ mvn clean install
 mvn rewrite:run
 ```
 
-Or 
+Or depends on your POM configuration
 
 ```
 mvn org.openrewrite.maven:rewrite-maven-plugin:run
