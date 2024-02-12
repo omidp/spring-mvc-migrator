@@ -97,10 +97,12 @@ public class ExplicitWebAnnotationNames extends Recipe {
 						return a;
 					}
 					J.Assignment assignment = (J.Assignment) expression;
-					if (assignment.getVariable() instanceof J.Identifier && assignment.getAssignment() instanceof J.Literal) {
-						J.Identifier assignName = (J.Identifier) assignment.getVariable();
-						if ("value".equals(assignName.getSimpleName()) || "name".equals(assignName.getSimpleName())) {
-							return a;
+					if (assignment.getVariable() instanceof J.Identifier) {
+						if (assignment.getAssignment() instanceof J.Literal || "org.openrewrite.java.tree.J$Identifier".equals(assignment.getVariable().getClass().getName())) {
+							J.Identifier assignName = (J.Identifier) assignment.getVariable();
+							if ("value".equals(assignName.getSimpleName()) || "name".equals(assignName.getSimpleName())) {
+								return a;
+							}
 						}
 					}
 				}

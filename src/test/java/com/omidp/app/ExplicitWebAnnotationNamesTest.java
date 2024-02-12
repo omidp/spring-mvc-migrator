@@ -76,4 +76,29 @@ public class ExplicitWebAnnotationNamesTest implements RewriteTest {
 		);
 	}
 
+	@Test
+	void transformConstantsTest() {
+		rewriteRun(
+				java(
+						"""
+                                 import org.springframework.http.ResponseEntity;
+                                                            import org.springframework.web.bind.annotation.*;
+                                                           
+                                                            @RestController
+                                                            @RequestMapping("/users")
+                                                            public class UsersController {
+                                                            	public static final String USERNAME = "j_username";
+                                                                @GetMapping("/")
+                                                                public ResponseEntity<String> getUser(@RequestParam(value=USERNAME) Long userId) {
+                                                                    System.out.println(userId);
+                                                                }
+                                                                
+                                                                
+                                                                
+                                                            }
+                            """
+				)
+		);
+	}
+
 }
